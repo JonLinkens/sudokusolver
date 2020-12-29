@@ -2,11 +2,11 @@ from tkinter import Tk
 from solver import SudokuSolve
 from ui import SudokuUI
 
-level_name = "two" # name of .sudoku file to solve 
+level_name = "one" # name of .sudoku file to solve 
                        # structured as 9 lines of 9 integers 
 
 # File Parsing ------------------------------------------
-with open('%s.sudoku' % level_name, 'r') as file:
+with open('sudokus/%s.sudoku' % level_name, 'r') as file:
     grid = [[0 for x in range(9)] for x in range(9)]
     data = file.read().splitlines()
     for line, yval in enumerate(data):
